@@ -1,0 +1,105 @@
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    font-size: 17px;
+    background-color:#0f0f0f;
+    font-family: "Quicksand",consolas,sans-serif;
+    scroll-behavior: smooth;
+}
+nav{
+    height: 63px;
+    background-color: #1985A1;
+    justify-content: flex-end;
+    display: flex;
+    align-items: center;
+}
+.linkscontainer{
+    height: 100%;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+}
+.logoname1{
+    display: none;
+}
+nav a{
+    height: 100%;
+    padding: 0 20px;
+    align-items: center;
+    text-decoration: none;
+    color: #DCDCDD;
+    display: flex;
+    font-size: 0.7rem;
+    font-weight: 800;
+}
+/* Deleted
+.logoname2{
+    color: #202020;
+    padding-right: 20px;
+    background-color: #d16666ff;
+}
+*/
+nav a:hover{
+    background-color: #CC6B49;
+    transition: 0.6s;  
+}
+nav .name{ 
+    padding: 0 2rem;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: #fff;
+    margin-right: auto;
+    background-color: #d16666ff;
+}
+nav svg{
+    fill: #28282B;
+}
+.opensidebar, .closesidebar{
+    display:none;
+}
+#sidebaractive{
+    display:none;
+}
+@media(max-width: 700px){
+    .linkscontainer{
+        flex-direction: column;
+        align-items: flex-start;
+        display:none;
+        position:fixed;
+        top: 0;
+        right: 0;
+        z-index: 10;
+        width: 180px;
+        background-color: #1985A1;
+        box-shadow: -4px 0px 5px hsla(188, 60%, 5%, 0.59);
+    }
+    nav a{
+        height: auto;
+        width: 100%;
+        padding: 20px 30px;
+        box-sizing: border-box;
+        justify-content: flex-start;
+    }
+    .opensidebar, .closesidebar{
+        padding: 15px;
+        display:block;
+    }
+    #sidebaractive:checked ~ .linkscontainer{
+        display: flex;
+    }
+    .logoname1{
+        color: #DCDCDD;
+        font-weight:bold;
+        display: block;
+        margin-right: auto;
+        padding-left: 30px;
+    }
+    .logoname2{
+        display: none;
+    }
+}
